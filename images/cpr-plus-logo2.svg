@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 30 1200 640" role="img" aria-labelledby="title desc">
+  <title id="title">CPR Plus logo</title>
+  <desc id="desc">CPR Plus lettering over an oval inspired by the Arizona state flag.</desc>
+
+  <defs>
+    <clipPath id="oval-clip">
+      <path d="M58 286C58 164 280 78 593 78c313 0 549 86 549 208S914 493 601 493 58 408 58 286Z"/>
+    </clipPath>
+  </defs>
+
+  <!-- Arizona-inspired field -->
+  <g clip-path="url(#oval-clip)">
+    <rect x="42" y="62" width="1118" height="238" fill="#e53a0b"/>
+    <rect x="42" y="286" width="1118" height="225" fill="#164b98"/>
+
+    <!-- Alternating sun rays -->
+    <path fill="#ffd21c" d="M222 286 91 163l72-37Zm0 0L222 104l82-17Zm0 0L385 72l92-10Zm0 0L565 61h99Zm0 0L762 69l95 19Zm0 0L948 111l79 43Zm0 0 887-88 50 67Z"/>
+
+    <!-- Clean horizon line -->
+    <path d="M43 286h1116" fill="none" stroke="#0c3577" stroke-width="7" opacity=".35"/>
+  </g>
+
+  <!-- Heavy oval keyline -->
+  <path d="M58 286C58 164 280 78 593 78c313 0 549 86 549 208S914 493 601 493 58 408 58 286Z"
+        fill="none" stroke="#0a0a0b" stroke-width="22" stroke-linejoin="round"/>
+
+  <!-- Copper star -->
+  <path d="m222 185 25 76 80 1-65 47 24 77-64-47-65 47 25-77-65-47 80-1Z"
+        fill="#c9aa69" stroke="#111112" stroke-width="11" stroke-linejoin="round"/>
+
+  <!-- CPR, built as vector shapes rather than live type -->
+  <g transform="translate(110 29) scale(.82)" fill="#f7f7f5" stroke="#0b0b0c" stroke-width="17" stroke-linejoin="round">
+    <path d="M474 145h-82c-61 0-91 31-91 94v91c0 61 30 92 90 92h82c56 0 83-29 83-84v-24h-73v20c0 20-9 29-29 29h-49c-22 0-31-10-31-33v-91c0-24 10-35 32-35h48c20 0 29 10 29 31v17h73v-22c0-57-27-85-82-85Z"/>
+    <path fill-rule="evenodd" d="M570 145h174c53 0 80 28 80 82v35c0 53-28 80-82 80h-95v80h-77Zm77 59v80h81c15 0 23-9 23-27v-26c0-18-8-27-24-27Z"/>
+    <path fill-rule="evenodd" d="M838 145h172c56 0 84 28 84 82v29c0 40-16 65-48 75l55 91h-88l-47-82h-51v82h-77Zm77 59v78h80c17 0 25-9 25-27v-24c0-18-8-27-25-27Z"/>
+  </g>
+
+  <!-- Hand-lettered Plus: black keyline followed by the warm red brush stroke -->
+  <g transform="translate(120 70) rotate(-3 850 450) scale(.86 1)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M637 423C652 371 714 335 776 333c43-1 67 15 68 42 1 35-41 69-99 83-31 8-58 7-75-2m104-99c-24 50-49 113-62 174"
+          stroke="#0a0a0b" stroke-width="55"/>
+    <path d="M637 423C652 371 714 335 776 333c43-1 67 15 68 42 1 35-41 69-99 83-31 8-58 7-75-2m104-99c-24 50-49 113-62 174"
+          stroke="#e63b12" stroke-width="37"/>
+
+    <path d="M835 458c18-52 42-117 59-148 9-17 17-24 23-19 10 8-4 61-30 113-17 35-36 62-51 70-10 5-14-1-1-16Z"
+          stroke="#0a0a0b" stroke-width="48"/>
+    <path d="M835 458c18-52 42-117 59-148 9-17 17-24 23-19 10 8-4 61-30 113-17 35-36 62-51 70-10 5-14-1-1-16Z"
+          stroke="#e63b12" stroke-width="30"/>
+
+    <path d="M916 397c-15 35-28 74-8 80 25 7 49-34 66-74m2-5c-13 33-26 92-5 78 24-16 70-55 104-90 17 31 25 70 11 94-12 21-44 22-62 7-13-11-20-27-19-43 8 34 35 58 73 57 30-1 54-22 70-49"
+          stroke="#0a0a0b" stroke-width="49" stroke-linejoin="round"/>
+    <path d="m1075 354-26 57 53 1Z" fill="#0a0a0b" stroke="none"/>
+    <path d="M916 397c-15 35-28 74-8 80 25 7 49-34 66-74m2-5c-13 33-26 92-5 78 24-16 70-55 104-90 17 31 25 70 11 94-12 21-44 22-62 7-13-11-20-27-19-43 8 34 35 58 73 57 30-1 54-22 70-49"
+          stroke="#e63b12" stroke-width="31" stroke-linejoin="round"/>
+    <path d="m1075 363-16 42 33 2Z" fill="#e63b12" stroke="none"/>
+  </g>
+</svg>
