@@ -34,6 +34,11 @@
             <small>SAFETY TRAINING EXCELLENCE</small>
           </span>
         </a>
+        <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
         <div class="nav-onsite-right">
           <div class="nav-links">
             <a class="is-active" href="index.html">Home</a>
@@ -203,5 +208,44 @@
       <div><a href="#">Privacy Policy</a><a href="#">Terms of Service</a></div>
     </div>
   </footer>
+  <script>
+    (() => {
+      const setupNav = (nav) => {
+        const toggle = nav.querySelector('.nav-toggle');
+        const panel = nav.querySelector('.nav-onsite-right');
+        if (!toggle || !panel) {
+          return;
+        }
+
+        const close = () => {
+          nav.classList.remove('nav-open');
+          toggle.setAttribute('aria-expanded', 'false');
+        };
+
+        toggle.addEventListener('click', () => {
+          const open = nav.classList.toggle('nav-open');
+          toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        });
+
+        nav.querySelectorAll('.nav-links a, .nav-onsite-right .btn').forEach((link) => {
+          link.addEventListener('click', close);
+        });
+
+        window.addEventListener('resize', () => {
+          if (window.innerWidth > 760) {
+            close();
+          }
+        });
+
+        document.addEventListener('keydown', (event) => {
+          if (event.key === 'Escape') {
+            close();
+          }
+        });
+      };
+
+      document.querySelectorAll('.nav').forEach(setupNav);
+    })();
+  </script>
 </body>
 </html>
