@@ -26,25 +26,6 @@ body {
   overflow-x: hidden;
 }
 
-.js-page-transition body {
-  opacity: 0;
-  transition: opacity 220ms ease;
-}
-
-.js-page-transition body.page-ready {
-  opacity: 1;
-}
-
-.js-page-transition body.page-leaving {
-  opacity: 0;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .js-page-transition body {
-    transition: none;
-  }
-}
-
 h1,
 h2,
 h3,
