@@ -578,7 +578,7 @@ a {
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
   padding: 32px;
   display: grid;
-  grid-template-columns: 440px 1fr;
+  grid-template-columns: 420px 1fr;
   align-items: center;
   gap: 48px;
 }
@@ -586,21 +586,19 @@ a {
 .aed-logo {
   background: transparent;
   border-radius: 0;
-  width: 420px;
-  height: 210px;
-  overflow: hidden;
+  width: 100%;
+  height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .aed-logo img {
-  width: 560px;
+  width: 100%;
+  max-width: 420px;
   height: auto;
-  max-width: none;
   display: block;
   object-fit: contain;
-  transform: translateY(2px);
 }
 
 .aed-copy h3 {
@@ -1950,12 +1948,13 @@ a {
 
   .aed-logo {
     width: min(100%, 330px);
-    height: 170px;
+    height: auto;
     margin: 0 auto;
   }
 
   .aed-logo img {
-    width: 430px;
+    width: 100%;
+    max-width: 330px;
     height: auto;
   }
 
