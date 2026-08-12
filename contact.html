@@ -203,18 +203,21 @@
             </div>
           </aside>
 
-          <form class="touch-form" action="#" method="post">
+          <form class="touch-form" action="https://icy-band-8870.lukegprovost2.workers.dev/api/contact" method="POST">
+            <div class="form-status" aria-live="polite"></div>
             <div class="field-row">
-              <label class="field"><span>Your Name</span><input type="text" placeholder="John Doe"></label>
-              <label class="field"><span>Company / Organization</span><input type="text"
+              <label class="field"><span>Your Name</span><input type="text" name="name" placeholder="John Doe"></label>
+              <label class="field"><span>Company / Organization</span><input type="text" name="organization"
                   placeholder="Acme Inc."></label>
             </div>
             <div class="field-row">
-              <label class="field"><span>Phone Number</span><input type="tel" placeholder="602-571-6222"></label>
-              <label class="field"><span>Email Address</span><input type="email" placeholder="john@example.com"></label>
+              <label class="field"><span>Phone Number</span><input type="tel" name="phone"
+                  placeholder="602-571-6222"></label>
+              <label class="field"><span>Email Address</span><input type="email" name="email"
+                  placeholder="john@example.com"></label>
             </div>
             <div class="field-row">
-              <label class="field"><span>Training Needed</span><select>
+              <label class="field"><span>Training Needed</span><select name="training_needed">
                   <option>CPR / AED</option>
                   <option>First Aid</option>
                   <option>CPR + First Aid</option>
@@ -229,17 +232,21 @@
                   <option>Narcan Admin</option>
                   <option>Crisis De-Escalation</option>
                 </select></label>
-              <label class="field"><span>Number of Participants</span><input type="number" placeholder="10"></label>
+              <label class="field"><span>Number of Participants</span><input type="number" name="participants"
+                  placeholder="10"></label>
             </div>
             <div class="field-row">
               <label class="field"><span>Training Type</span>
-                <div class="radio-row"><label><input type="radio" name="ttype"> Individual</label><label><input
-                      type="radio" name="ttype" checked> Group</label></div>
+                <div class="radio-row"><label><input type="radio" name="training_type" value="Individual">
+                    Individual</label><label><input type="radio" name="training_type" value="Group" checked>
+                    Group</label></div>
               </label>
-              <label class="field"><span>City / Location</span><input type="text" placeholder="Phoenix, AZ"></label>
+              <label class="field"><span>City / Location</span><input type="text" name="location"
+                  placeholder="Phoenix, AZ"></label>
             </div>
-            <label class="field"><span>Additional Details</span><textarea rows="4"
+            <label class="field"><span>Additional Details</span><textarea rows="4" name="message"
                 placeholder="Tell us about your specific requirements, date preferences, or facility needs..."></textarea></label>
+            <!-- <div class="h-captcha" data-captcha="true" data-size="normal"></div> -->
             <button class="btn btn-red touch-submit" type="submit">Request a Quote <img
                 src="https://www.figma.com/api/mcp/asset/a63c6355-bfbf-4022-9f4a-e05ac3bc34f1.svg" alt=""></button>
             <p class="touch-foot">By submitting, you agree to receive a quote and follow-up regarding your training
@@ -284,8 +291,44 @@
       <div><a href="contact.html">Privacy Policy</a><a href="contact.html">Terms of Service</a></div>
     </div>
   </footer>
+  <script src="https://web3forms.com/client/script.js" async defer></script>
   <script>
     (() => {
+      const handleFormSubmit = (form) => {
+        if (!form) return;
+
+        const statusEl = form.querySelector('.form-status');
+        if (!statusEl) return;
+
+        form.addEventListener('submit', async (event) => {
+          event.preventDefault();
+          const formData = new FormData(form);
+
+          statusEl.textContent = 'Sending your request...';
+          statusEl.className = 'form-status is-loading';
+
+          try {
+            const response = await fetch(form.action, {
+              method: 'POST',
+              body: formData
+            });
+
+            const result = await response.json();
+
+            if (!response.ok || result.success === false) {
+              throw new Error(result.message || 'Please try again.');
+            }
+
+            statusEl.textContent = 'Thanks! Your request has been sent successfully.';
+            statusEl.className = 'form-status is-success';
+            form.reset();
+          } catch (error) {
+            statusEl.textContent = error.message || 'Something went wrong. Please try again.';
+            statusEl.className = 'form-status is-error';
+          }
+        });
+      };
+
       const setupNav = (nav) => {
         const toggle = nav.querySelector('.nav-toggle');
         const panel = nav.querySelector('.nav-onsite-right');
@@ -321,6 +364,7 @@
       };
 
       document.querySelectorAll('.nav').forEach(setupNav);
+      document.querySelectorAll('.touch-form').forEach(handleFormSubmit);
     })();
   </script>
 </body>
