@@ -2,36 +2,34 @@
 
 This file tracks client-facing progress updates for the AZ CPR Plus+ website build.
 
-## 2026-08-10
+## 2026-08-12
 
 ### Completed
 
-- Built all primary pages as a cohesive static site:
+- Finalized the static multi-page site build across:
   - Home (`index.html`)
   - Onsite / Group Training (`about.html`)
   - Courses (`courses.html`)
   - About & Contact (`contact.html`)
-- Implemented consistent global navigation and footer across all pages.
-- Implemented responsive layout behavior for desktop and mobile breakpoints.
-- Replaced primary logo references with local brand file `images/cpr-plus-logo.svg`.
-- Updated organization contact details site-wide:
-  - Email: `brad@azcprplus.com`
-  - Phone: `602-571-6222`
-- Updated naming consistency to `AZ CPR Plus+` across page titles and visible branding.
-- Refined About & Contact mission section:
-  - Replaced placeholder image source with local file `images/Rob Leaky.png`.
-  - Removed mission stats and removed mission aside callout box.
-  - Added image name tag label: `Brad Leakey`.
-  - Tuned mobile crop/positioning to reduce dead space above subject.
+- Standardized the global header, main navigation, and footer across all pages.
+- Corrected social links and navigation consistency.
+- Updated the quote form section to use the same red banner treatment as the rest of the branded site.
+- Completed mobile spacing, image ordering, and typography refinements.
+- Standardized the footer copy to:
+  - “Trusted Emergency Response Training in Arizona. Taught by first responders with decades of real-world experience.”
+- Removed time-based turnaround language from the site, including references to getting back within 24 hours.
+- Cleaned up course section copy and CTA language for consistency.
+- Finalized site-wide content polish and form layout improvements for production-level review.
 
-### In Review
+### Final QA Notes
 
-- Final visual polish pass for spacing/typography consistency between pages.
-- Optional replacement of remaining remote icon/image assets with local files.
+- Navigation and footer structure are consistent across all pages.
+- Contact and quote sections are aligned with the design language used elsewhere on the site.
+- Mobile layouts have been checked for stacking, spacing, and line wrapping.
+- Final content has been cleaned for wording consistency and client-facing professionalism.
 
 ### Next Suggested Milestones
 
-1. Final content QA pass (spelling, punctuation, capitalization, legal text).
-2. Accessibility pass (heading order, alt text quality, form label and contrast checks).
-3. Performance pass (image optimization and local asset consolidation).
-4. Publish preview deployment (GitHub Pages or equivalent) for easier client review.
+1. Publish preview deployment (GitHub Pages or equivalent) for stakeholder review.
+2. Final client approval signoff.
+3. Optional asset optimization pass if additional performance tuning is desired.
