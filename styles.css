@@ -1252,12 +1252,19 @@ a {
 
 .h-captcha {
   max-width: 100%;
-  overflow: hidden;
+}
+
+/* hCaptcha renders a fixed 303px widget, so scale it down to fit narrow screens instead of clipping it. */
+@media (max-width: 430px) {
+  .h-captcha {
+    transform: scale(0.9);
+    transform-origin: left center;
+  }
 }
 
 @media (max-width: 374px) {
   .h-captcha {
-    transform: scale(0.72);
+    transform: scale(0.78);
     transform-origin: left center;
   }
 
