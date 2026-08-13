@@ -1336,6 +1336,12 @@ a {
   font-weight: 700;
 }
 
+@media (max-width: 760px) {
+  .quote-help a {
+    display: block;
+  }
+}
+
 .courses-page {
   background: #f8fafc;
 }
