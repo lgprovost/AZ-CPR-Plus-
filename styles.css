@@ -268,9 +268,7 @@ a {
 
 .hero {
   position: relative;
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
+  width: 100%;
   min-height: 640px;
   overflow: hidden;
   display: flex;
@@ -346,6 +344,17 @@ a {
 
   .hero h1 .headline-line:last-child .headline-nowrap {
     white-space: nowrap;
+  }
+}
+
+@media (max-width: 359px) {
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .hero h1 .headline-nowrap,
+  .hero h1 .headline-line:last-child .headline-nowrap {
+    white-space: normal;
   }
 }
 
@@ -1229,6 +1238,36 @@ a {
   background: #fef2f2;
   color: var(--red);
   border: 1px solid #fecaca;
+}
+
+.field {
+  min-width: 0;
+}
+
+.field input,
+.field select,
+.field textarea {
+  max-width: 100%;
+}
+
+.h-captcha {
+  max-width: 100%;
+  overflow: hidden;
+}
+
+@media (max-width: 374px) {
+  .h-captcha {
+    transform: scale(0.72);
+    transform-origin: left center;
+  }
+
+  .touch-grid {
+    padding: 16px 10px;
+  }
+
+  .touch-form {
+    padding: 14px;
+  }
 }
 
 .field-row {
@@ -2319,7 +2358,12 @@ a {
   .footer-grid,
   .mission-grid,
   .touch-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .touch-grid {
+    padding: 32px;
+    gap: 36px;
   }
 
   .experience-box {
@@ -2366,7 +2410,7 @@ a {
   .steps-row,
   .why-org-grid,
   .field-row {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .step-line {
@@ -2594,8 +2638,13 @@ a {
   }
 
   .touch-form {
-    padding: 24px;
+    padding: 20px;
     border-radius: 24px;
+  }
+
+  .touch-grid {
+    padding: 20px 16px;
+    gap: 28px;
   }
 
   .touch-left li strong {
