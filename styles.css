@@ -918,9 +918,9 @@ a {
 }
 
 .train-icon-wrap {
-  width: 56px;
-  height: 56px;
-  border-radius: 16px;
+  width: 72px;
+  height: 72px;
+  border-radius: 18px;
   background: #fff;
   display: grid;
   place-items: center;
@@ -928,8 +928,8 @@ a {
 }
 
 .train-icon-wrap img {
-  width: 24px;
-  height: 24px;
+  width: 36px;
+  height: 36px;
   object-fit: contain;
 }
 
