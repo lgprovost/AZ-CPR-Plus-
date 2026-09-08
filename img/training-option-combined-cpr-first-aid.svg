@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none">
+  <title>Combined CPR and first aid</title>
+  <circle cx="32" cy="32" r="32" fill="#FEF2F2"/>
+  <circle cx="32" cy="32" r="10.5" fill="#D62828"/>
+  <path d="M30.25 25.5h3.5v4.75h4.75v3.5h-4.75v4.75h-3.5v-4.75H25.5v-3.5h4.75V25.5Z" fill="#FFFFFF"/>
+</svg>

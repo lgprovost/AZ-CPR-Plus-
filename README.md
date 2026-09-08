@@ -12,11 +12,11 @@ Marketing website build for AZ CPR Plus+, implemented as a static multi-page HTM
   - Courses: `courses.html`
   - About & Contact: `contact.html`
 - Brand and content assets:
-  - `images/cpr-plus-logo3.svg`
-  - `images/class_setup.png`
-  - `images/class_setup2.png`
-  - `images/Rob Leaky.png`
-  - `images/aed_arizona_logo.png`
+  - `img/cpr-plus-logo3.svg`
+  - `img/class_setup.png`
+  - `img/class_setup2.png`
+  - `img/Rob Leaky.png`
+  - `img/aed_arizona_logo.png`
 
 ## Current Status
 
@@ -69,7 +69,7 @@ Recommended process for stakeholder updates:
 ├── styles.css
 ├── README.md
 ├── CLIENT-UPDATES.md
-├── images/
+├── img/
 │   ├── cpr-plus-logo3.svg
 │   ├── class_setup.png
 │   ├── class_setup2.png

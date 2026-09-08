@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none">
+  <title>CPR and AED certification</title>
+  <circle cx="32" cy="32" r="32" fill="#FEF2F2"/>
+  <path d="M27.25 21.5h9.25c.95 0 1.5 1.05.95 1.8L34 28.25h5.15c1.05 0 1.6 1.3.85 2.05L28.8 42.2c-.8.85-2.15.05-1.85-1.05l2.4-8.25h-4.6c-.85 0-1.4-.85-1.1-1.65l3.05-9c.1-.45.3-.75.55-.75Z" fill="#D62828"/>
+</svg>
