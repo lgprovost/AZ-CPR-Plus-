@@ -809,10 +809,11 @@ a {
 
 .onsite-hero {
   position: relative;
-  min-height: 550px;
+  min-height: 450px;
   overflow: hidden;
   display: flex;
   align-items: center;
+  background: #0f172a;
 }
 
 .onsite-hero-bg {
@@ -821,21 +822,140 @@ a {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.6;
+  object-position: center;
 }
 
 .onsite-hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, #0f172a 0%, rgba(15, 23, 42, 0.72) 52%, rgba(15, 23, 42, 0) 100%);
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.4) 0%, rgba(15, 23, 42, 0.8) 50%, #0f172a 100%);
 }
 
 .onsite-hero-content {
   position: relative;
   z-index: 1;
-  max-width: 672px;
+  max-width: min(672px, 50%);
   display: grid;
-  gap: 24px;
+  gap: 22px;
+  padding: 24px 0;
+}
+
+.contact-hero.onsite-hero {
+  min-height: 450px;
+}
+
+.contact-hero.onsite-hero::before {
+  content: "";
+  position: absolute;
+  top: 6%;
+  right: 2.5%;
+  width: 52%;
+  height: 88%;
+  z-index: 0;
+  border-radius: 28px 0 0 28px;
+  background: linear-gradient(270deg, #25435a 0%, #1c3449 56%, rgba(28, 52, 73, 0) 100%);
+}
+
+.about-hero.contact-hero.onsite-hero::before {
+  display: none;
+}
+
+.about-hero.contact-hero.onsite-hero {
+  min-height: 620px;
+}
+
+.about-hero.contact-hero.onsite-hero::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 7%;
+  width: 64%;
+  height: 115%;
+  background: radial-gradient(ellipse at center, rgba(28, 117, 127, 0.52) 0%, rgba(28, 117, 127, 0.18) 44%, rgba(28, 117, 127, 0) 72%);
+  transform: translateY(-50%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.about-hero .about-hero-visual {
+  position: absolute;
+  top: 50%;
+  right: 7%;
+  width: min(52%, 560px);
+  margin: 0;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.about-hero .about-hero-visual::before {
+  content: "";
+  position: absolute;
+  inset: 6px -8px -8px 8px;
+  border: 1px solid rgba(28, 117, 127, 0.5);
+  border-radius: 24px;
+  background: var(--ink);
+  z-index: -1;
+}
+
+.about-hero .about-hero-visual .onsite-hero-bg {
+  inset: auto 0 auto auto;
+  position: relative;
+  top: auto;
+  right: auto;
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  object-position: center;
+  padding: 0;
+  border: 1px solid rgba(148, 212, 215, 0.52);
+  border-radius: 24px;
+  box-shadow: 0 22px 42px rgba(0, 0, 0, 0.34);
+  transform: none;
+  z-index: 1;
+  background: transparent;
+}
+
+.about-hero .about-hero-visual figcaption {
+  position: relative;
+  z-index: 1;
+  margin-top: 12px;
+  padding: 0 16px;
+  color: #b8cbd0;
+  font-size: 13px;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.about-hero.contact-hero.onsite-hero .onsite-hero-overlay {
+  display: none;
+}
+
+.about-hero .about-story-link {
+  width: max-content;
+  color: #b8dadd;
+  border-bottom: 1px solid rgba(184, 218, 221, 0.45);
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.5;
+  text-decoration: none;
+  transition: color 180ms ease, border-color 180ms ease;
+}
+
+.about-hero .about-story-link:hover,
+.about-hero .about-story-link:focus-visible {
+  color: #fff;
+  border-color: #fff;
+}
+
+.about-hero .about-story-link span {
+  margin-left: 4px;
+  color: var(--red);
+}
+
+.contact-hero.onsite-hero .onsite-hero-content {
+  max-width: min(672px, 50%);
+  z-index: 3;
 }
 
 .btn-with-icon {
@@ -1993,32 +2113,42 @@ a {
 
 .contact-hero {
   position: relative;
-  min-height: 430px;
+  min-height: 550px;
   display: flex;
   align-items: center;
   overflow: hidden;
+  background: #0f172a;
 }
 
 .contact-hero-bg {
   position: absolute;
-  inset: 0;
-  width: 100%;
+  top: 50%;
+  right: 0;
+  width: 50%;
   height: 100%;
-  object-fit: cover;
+  box-sizing: border-box;
+  object-fit: contain;
+  object-position: right center;
+  padding: 28px;
+  background: #12283a;
+  border-radius: 32px 0 0 32px;
 }
 
 .contact-hero-overlay {
   position: absolute;
-  inset: 0;
-  background: linear-gradient(90deg, rgba(15, 23, 42, 0.88) 0%, rgba(15, 23, 42, 0.7) 45%, rgba(15, 23, 42, 0.2) 100%);
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 16%;
+  background: linear-gradient(90deg, #0f172a 0%, rgba(15, 23, 42, 0) 100%);
 }
 
 .contact-hero-content {
   position: relative;
   z-index: 1;
-  max-width: 720px;
+  max-width: min(672px, 50%);
   display: grid;
-  gap: 20px;
+  gap: 24px;
 }
 
 .contact-hero-content h1 {
@@ -2134,8 +2264,8 @@ a {
 }
 
 .serve-grid article span img {
-  width: 24px;
-  height: 24px;
+  width: 48px;
+  height: 48px;
 }
 
 .serve-grid h3 {
@@ -2186,8 +2316,8 @@ a {
 }
 
 .choose-grid article img {
-  width: 36px;
-  height: 36px;
+  width: 56px;
+  height: 56px;
 }
 
 .choose-grid h4 {
@@ -2279,6 +2409,7 @@ a {
 .touch-left li span img {
   width: 16px;
   height: 16px;
+  filter: brightness(0);
 }
 
 .touch-left li small {
@@ -2603,8 +2734,108 @@ a {
     min-height: 720px;
   }
 
-  .onsite-hero {
-    min-height: 640px;
+  .onsite-hero,
+  .contact-hero {
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .onsite-hero-content,
+  .contact-hero-content {
+    order: 1;
+    max-width: 100%;
+    width: 100%;
+    padding-top: 64px;
+    padding-bottom: 40px;
+  }
+
+  .onsite-hero-bg,
+  .contact-hero-bg {
+    position: relative;
+    order: 2;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1;
+    max-height: none;
+    padding: 0;
+    opacity: 1;
+    transform: none;
+    border-radius: 0;
+  }
+
+  .onsite-hero-overlay,
+  .contact-hero-overlay {
+    display: none;
+  }
+
+  .contact-hero.onsite-hero .onsite-hero-bg {
+    position: relative;
+    inset: auto;
+    top: auto;
+    right: auto;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1;
+    padding: 0;
+    transform: none;
+  }
+
+  .about-hero.contact-hero.onsite-hero {
+    min-height: auto;
+  }
+
+  .about-hero.contact-hero.onsite-hero::after {
+    top: auto;
+    right: -18%;
+    bottom: 8%;
+    width: 136%;
+    height: 58%;
+    transform: none;
+  }
+
+  .about-hero .about-hero-visual {
+    position: relative;
+    top: auto;
+    right: auto;
+    order: 2;
+    width: calc(100% - 32px);
+    margin: 0 auto 40px;
+    padding-bottom: 10px;
+    border-radius: 24px;
+    background: var(--ink);
+    transform: none;
+  }
+
+  .about-hero .about-hero-visual::before {
+    inset: 6px -6px -7px 6px;
+  }
+
+  .about-hero .about-hero-visual .onsite-hero-bg {
+    width: 100%;
+    height: auto;
+    aspect-ratio: auto;
+  }
+
+  .about-hero .about-hero-visual figcaption {
+    padding: 0 8px;
+    text-align: center;
+  }
+
+  .contact-hero.onsite-hero::before {
+    display: none;
+  }
+
+  .contact-hero.onsite-hero .onsite-hero-overlay {
+    display: none;
+  }
+
+  .contact-hero.onsite-hero .onsite-hero-content {
+    max-width: 100%;
   }
 
   .onsite-hero p {
@@ -2632,7 +2863,7 @@ a {
   }
 
   .contact-hero {
-    min-height: 520px;
+    min-height: auto;
   }
 
   .mission-media {

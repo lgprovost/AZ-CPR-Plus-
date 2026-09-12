@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none">
+  <title>Hands practicing chest compressions</title>
+  <rect x="2" y="2" width="60" height="60" rx="15" fill="#FFFFFF"/>
+  <g stroke="#D62828" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M11 53c2-7 9-11 21-11s19 4 21 11"/>
+    <path d="M32 10v11m-4-4 4 4 4-4"/>
+    <path d="m51 26-10 6H29a4 4 0 0 0 0 8h13l11-6" fill="#FFFFFF"/>
+    <path d="m11 23 11 6h13a4 4 0 0 1 0 8H24l-13-6" fill="#FFFFFF"/>
+    <path d="M27 33h8M32 42v7m-3-3 3 3 3-3"/>
+  </g>
+</svg>

@@ -7,10 +7,10 @@ This file tracks client-facing progress updates for the AZ CPR Plus+ website bui
 ### Completed
 
 - Finalized the static multi-page site build across:
-  - Home (`index.html`)
-  - Onsite / Group Training (`about.html`)
+  - Home (`home.html`)
+  - Group Training (`group-training.html`)
   - Courses (`courses.html`)
-  - About & Contact (`contact.html`)
+  - About (`about.html`)
 - Standardized the global header, main navigation, and footer across all pages.
 - Corrected social links and navigation consistency.
 - Updated the quote form section to use the same red banner treatment as the rest of the branded site.

@@ -7,10 +7,10 @@ Marketing website build for AZ CPR Plus+, implemented as a static multi-page HTM
 - Project type: static multi-page website
 - Stack: HTML5 + CSS3
 - Pages implemented:
-  - Home: `index.html`
-  - Onsite / Group Training: `about.html`
+  - Home: `home.html`
+  - Group Training: `group-training.html`
   - Courses: `courses.html`
-  - About & Contact: `contact.html`
+  - About: `about.html`
 - Brand and content assets:
   - `img/cpr-plus-logo3.svg`
   - `img/class_setup.png`
@@ -34,7 +34,7 @@ Marketing website build for AZ CPR Plus+, implemented as a static multi-page HTM
 
 Because this is a static site, you can open pages directly in a browser:
 
-1. Open `index.html` for the home page.
+1. Open `home.html` for the home page.
 2. Navigate between pages using the site nav.
 
 Optional local server (recommended):
@@ -46,7 +46,7 @@ python -m http.server 5500
 
 Then open:
 
-`http://localhost:5500/index.html`
+`http://localhost:5500/home.html`
 
 ## Client Review Workflow
 
@@ -63,9 +63,9 @@ Recommended process for stakeholder updates:
 ```text
 .
 ├── about.html
-├── contact.html
+├── group-training.html
 ├── courses.html
-├── index.html
+├── home.html
 ├── styles.css
 ├── README.md
 ├── CLIENT-UPDATES.md

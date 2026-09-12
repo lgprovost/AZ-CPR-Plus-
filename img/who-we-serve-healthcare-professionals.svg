@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none">
+  <title>Healthcare Professionals</title>
+  <defs><filter id="shadow" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="1.5" stdDeviation="1.5" flood-color="#0F172A" flood-opacity=".10"/></filter></defs>
+  <rect x="2" y="2" width="60" height="60" rx="15" fill="#FFFFFF" filter="url(#shadow)"/>
+  <path d="m32 13 10 4v9.25C42 33.3 37.55 38 32 38s-10-4.7-10-11.75V17l10-4Z" fill="#D62828"/>
+  <path d="M25.25 25.5h13.5v1.65c0 4.15-2.95 7.35-6.75 7.35s-6.75-3.2-6.75-7.35V25.5Z" fill="#FFFFFF"/>
+  <path d="M32 16.5v6m-3-3h6" stroke="#FFFFFF" stroke-width="2.4" stroke-linecap="round"/>
+  <path d="M16 51c.45-7.45 4.75-12.15 11.75-13.65L32 41.5l4.25-4.15C43.25 38.85 47.55 43.55 48 51H16Z" fill="#D62828"/>
+</svg>

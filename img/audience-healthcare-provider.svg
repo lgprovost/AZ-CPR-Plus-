@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 36 42" role="img" aria-labelledby="audience-healthcare-title">
+  <title id="audience-healthcare-title">Healthcare professionals</title>
+  <path fill="#D62828" d="m18 2 10 4v9.25C28 22.3 23.55 27 18 27S8 22.3 8 15.25V6l10-4Z"/>
+  <path fill="#FFFFFF" d="M11.25 14.5h13.5v1.65c0 4.15-2.95 7.35-6.75 7.35s-6.75-3.2-6.75-7.35V14.5Z"/>
+  <path fill="none" stroke="#FFFFFF" stroke-width="2.4" stroke-linecap="round" d="M18 5.5v6m-3-3h6"/>
+  <path fill="#D62828" d="M2 40c.45-7.45 4.75-12.15 11.75-13.65L18 30.5l4.25-4.15C29.25 27.85 33.55 32.55 34 40H2Z"/>
+</svg>
