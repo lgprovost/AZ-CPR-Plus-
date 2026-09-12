@@ -48,6 +48,25 @@ Then open:
 
 `http://localhost:5500/home.html`
 
+## Image Optimization
+
+The pages use high-quality WebP photos with responsive `srcset` candidates. Original
+PNG files remain in `img/` for future edits. Existing CSS controls image placement
+and cropping; the image conversion does not crop or recolor photos. The AED logo
+uses lossless compression to preserve its artwork and transparency.
+
+Hero images load immediately with high priority. Other photos use lazy loading,
+and explicit image dimensions reserve their layout space while downloading.
+
+To regenerate the WebP assets after editing an original, run with Pillow installed:
+
+```powershell
+python scripts/optimize_images.py
+```
+
+If an original's dimensions change, also update its HTML `width`, `height`, and
+`srcset` width descriptors to match the generated images.
+
 ## Client Review Workflow
 
 Recommended process for stakeholder updates:
