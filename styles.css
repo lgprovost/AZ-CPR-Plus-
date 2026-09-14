@@ -1565,10 +1565,6 @@ a {
   text-transform: uppercase;
 }
 
-.section-group-header-light {
-  border-bottom-color: rgba(15, 23, 42, 0.12);
-}
-
 .courses-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1690,13 +1686,6 @@ a {
 .course-card-foot a img {
   width: 14px;
   height: 16px;
-}
-
-.specialty-row {
-  margin-top: 80px;
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 48px;
 }
 
 .feature-banner {
@@ -1944,96 +1933,6 @@ a {
   font-size: 14px;
 }
 
-.specialty-card {
-  border-radius: 24px;
-  padding: 32px;
-  display: grid;
-  grid-template-columns: 80px 1fr;
-  gap: 32px;
-  align-items: center;
-}
-
-.specialty-dark {
-  background: var(--ink);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-}
-
-.specialty-light {
-  background: #e2e8f0;
-  border: 1px solid #cbd5e1;
-}
-
-.specialty-icon {
-  width: 80px;
-  height: 80px;
-  border-radius: 16px;
-  display: grid;
-  place-items: center;
-}
-
-.specialty-icon.red {
-  background: var(--red);
-}
-
-.specialty-icon.navy {
-  background: #1e293b;
-}
-
-.specialty-icon img {
-  width: 30px;
-  height: 30px;
-}
-
-.specialty-card h4 {
-  font-size: 24px;
-  line-height: 1.2;
-  margin: 0 0 8px;
-}
-
-.specialty-dark h4 {
-  color: #fff;
-}
-
-.specialty-light h4 {
-  color: var(--ink);
-}
-
-.specialty-card p {
-  margin: 0 0 8px;
-  font-size: 14px;
-  line-height: 1.4;
-}
-
-.specialty-dark p {
-  color: #cbd5e1;
-}
-
-.specialty-light p {
-  color: var(--ink-soft);
-}
-
-.specialty-card a {
-  font-size: 16px;
-  font-weight: 700;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.specialty-dark a {
-  color: #fff;
-}
-
-.specialty-light a {
-  color: var(--red);
-}
-
-.specialty-card a img {
-  width: 16px;
-  height: 16px;
-}
-
 .pricing-cta {
   background: #fff;
   border-top: 1px solid #f1f5f9;
@@ -2118,54 +2017,6 @@ a {
   align-items: center;
   overflow: hidden;
   background: #0f172a;
-}
-
-.contact-hero-bg {
-  position: absolute;
-  top: 50%;
-  right: 0;
-  width: 50%;
-  height: 100%;
-  box-sizing: border-box;
-  object-fit: contain;
-  object-position: right center;
-  padding: 28px;
-  background: #12283a;
-  border-radius: 32px 0 0 32px;
-}
-
-.contact-hero-overlay {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 50%;
-  width: 16%;
-  background: linear-gradient(90deg, #0f172a 0%, rgba(15, 23, 42, 0) 100%);
-}
-
-.contact-hero-content {
-  position: relative;
-  z-index: 1;
-  max-width: min(672px, 50%);
-  display: grid;
-  gap: 24px;
-}
-
-.contact-hero-content h1 {
-  color: #fff;
-  font-size: clamp(38px, 5vw, 60px);
-  line-height: 1.1;
-}
-
-.contact-hero-content h1 span {
-  color: var(--red);
-}
-
-.contact-hero-content p {
-  margin: 0;
-  color: #cbd5e1;
-  font-size: 20px;
-  line-height: 1.6;
 }
 
 .mission-grid {
@@ -2592,9 +2443,7 @@ a {
   .quote-wrap {
     border-radius: 28px;
   }
-
-  .courses-grid,
-  .specialty-row {
+.courses-grid {
     grid-template-columns: 1fr;
   }
 
@@ -2632,11 +2481,6 @@ a {
 
   .course-card-body {
     padding: 28px;
-  }
-
-  .specialty-card {
-    grid-template-columns: 1fr;
-    gap: 16px;
   }
 
   .pricing-note {
@@ -2741,18 +2585,14 @@ a {
     flex-direction: column;
     align-items: stretch;
   }
-
-  .onsite-hero-content,
-  .contact-hero-content {
+.onsite-hero-content {
     order: 1;
     max-width: 100%;
     width: 100%;
     padding-top: 64px;
     padding-bottom: 40px;
   }
-
-  .onsite-hero-bg,
-  .contact-hero-bg {
+.onsite-hero-bg {
     position: relative;
     order: 2;
     top: auto;
@@ -2767,9 +2607,7 @@ a {
     transform: none;
     border-radius: 0;
   }
-
-  .onsite-hero-overlay,
-  .contact-hero-overlay {
+.onsite-hero-overlay {
     display: none;
   }
 
@@ -2874,10 +2712,6 @@ a {
     height: 460px;
     object-fit: cover;
     object-position: center 82%;
-  }
-
-  .contact-hero-content p {
-    font-size: 17px;
   }
 
   .serve-grid,
