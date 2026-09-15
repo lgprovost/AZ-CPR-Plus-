@@ -37,17 +37,22 @@ Marketing website build for AZ CPR Plus+, implemented as a static multi-page HTM
 - Production origin: `https://azcprplus.com`
 - Preferred hostname: apex/non-www (`azcprplus.com`)
 - Production pages: `/`, `/group-training`, `/courses`, and `/about`
-- The domain uses GoDaddy DNS and currently resolves to Windows/IIS hosting.
-- Install and enable an SSL certificate for both `azcprplus.com` and
-  `www.azcprplus.com` before deploying the included `web.config`.
-- `web.config` permanently redirects HTTP and `www` requests to the preferred
-  `https://azcprplus.com` hostname, redirects the retired `/home.html`, `/home`,
-  and `/index.html` URLs to `/`, and serves the three extensionless page routes.
-- In GoDaddy Plesk, confirm that the preferred domain is set to the non-www form
-  and that the Microsoft URL Rewrite module is available. Do not add a second
-  conflicting redirect in Plesk.
-- After deployment, verify HTTP status and `Location` headers for both hostnames,
-  all four production routes, and the retired home URLs.
+- The current GitHub Pages project URL is
+  `https://lgprovost.github.io/AZ-CPR-Plus-/`.
+- The domain is registered and its DNS is managed through GoDaddy; the website is
+  deployed by GitHub Pages, not GoDaddy hosting.
+- Home navigation uses `./` so it returns to the correct root on both the GitHub
+  Pages project URL and the future custom domain.
+- To connect the custom domain, first verify domain ownership in GitHub. Then set
+  `azcprplus.com` under **Repository Settings > Pages > Custom domain**; for
+  branch-based publishing, GitHub creates the repository's `CNAME` file.
+- In GoDaddy DNS, point the apex records to GitHub Pages and point the `www` CNAME
+  directly to `lgprovost.github.io` without the repository name. Remove the old,
+  conflicting GoDaddy hosting records as part of that DNS migration.
+- DNS changes can take up to 24 hours. After GitHub verifies the DNS configuration,
+  enable **Enforce HTTPS** in Pages settings.
+- After deployment, verify both hostnames, all four pages, and the retired home
+  URLs. GitHub Pages serves static `.html` routes and does not use `web.config`.
 
 ## Local Preview
 
