@@ -13,7 +13,7 @@ from PIL import Image
 
 
 ROOT = Path(__file__).resolve().parents[1]
-PAGES = ("home.html", "about.html", "courses.html", "group-training.html")
+PAGES = ("index.html", "about.html", "courses.html", "group-training.html")
 
 
 def main():
@@ -35,8 +35,17 @@ def main():
             if photo.mode == "RGBA" and photo.getchannel("A").getextrema() == (255, 255):
                 photo = photo.convert("RGB")
             width, height = photo.size
-            is_logo = source_path.stem == "aed_arizona_logo"
-            max_edge = 2880 if "hero" in source_path.stem else 2400
+            logo_names = {
+                "aed_arizona_logo",
+                "ahi_training",
+                "american-heart-association-training",
+                "arc_traiing",
+                "hsi_training",
+            }
+            is_logo = source_path.stem in logo_names
+            max_edge = 800 if is_logo and source_path.stem != "aed_arizona_logo" else (
+                2880 if "hero" in source_path.stem else 2400
+            )
             # Use integer multiples of the native ratio where possible.
             divisor = gcd(width, height)
             unit_w, unit_h = width // divisor, height // divisor
@@ -46,7 +55,7 @@ def main():
                 largest = (unit_w * multiple, unit_h * multiple)
             else:
                 largest = (round(width * scale), round(height * scale))
-            if is_logo:
+            if source_path.stem == "aed_arizona_logo":
                 largest = photo.size
 
             dimensions = {largest}

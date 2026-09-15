@@ -7,7 +7,7 @@ Marketing website build for AZ CPR Plus+, implemented as a static multi-page HTM
 - Project type: static multi-page website
 - Stack: HTML5 + CSS3
 - Pages implemented:
-  - Home: `home.html`
+  - Home: `index.html`
   - Group Training: `group-training.html`
   - Courses: `courses.html`
   - About: `about.html`
@@ -29,15 +29,29 @@ Marketing website build for AZ CPR Plus+, implemented as a static multi-page HTM
 - [x] Social links corrected and navigation buttons aligned
 - [x] Final copy cleanup completed, including removal of turnaround language
 - [x] Site is ready for client review and deployment
+- [x] Production canonical URLs target `https://azcprplus.com`
+- [x] Sitemap, crawler rules, social metadata, and structured data added
+
+## Production SEO Configuration
+
+- Production origin: `https://azcprplus.com`
+- Preferred hostname: apex/non-www (`azcprplus.com`)
+- Production pages: `/`, `/group-training`, `/courses`, and `/about`
+- The domain uses GoDaddy DNS and currently resolves to Windows/IIS hosting.
+- Install and enable an SSL certificate for both `azcprplus.com` and
+  `www.azcprplus.com` before deploying the included `web.config`.
+- `web.config` permanently redirects HTTP and `www` requests to the preferred
+  `https://azcprplus.com` hostname, redirects the retired `/home.html`, `/home`,
+  and `/index.html` URLs to `/`, and serves the three extensionless page routes.
+- In GoDaddy Plesk, confirm that the preferred domain is set to the non-www form
+  and that the Microsoft URL Rewrite module is available. Do not add a second
+  conflicting redirect in Plesk.
+- After deployment, verify HTTP status and `Location` headers for both hostnames,
+  all four production routes, and the retired home URLs.
 
 ## Local Preview
 
-Because this is a static site, you can open pages directly in a browser:
-
-1. Open `home.html` for the home page.
-2. Navigate between pages using the site nav.
-
-Optional local server (recommended):
+Run the site through a local server so its root-relative production links work:
 
 ```powershell
 # from project root
@@ -46,7 +60,7 @@ python -m http.server 5500
 
 Then open:
 
-`http://localhost:5500/home.html`
+`http://localhost:5500/`
 
 ## Image Optimization
 
@@ -74,8 +88,7 @@ Recommended process for stakeholder updates:
 1. Make changes in the project files.
 2. Commit with a clear message.
 3. Push to `main`.
-4. Record what changed in `CLIENT-UPDATES.md`.
-5. Share the latest commit or repository link with the client.
+4. Share the latest commit or repository link with the client.
 
 ## Repository Structure
 
@@ -84,10 +97,9 @@ Recommended process for stakeholder updates:
 ├── about.html
 ├── group-training.html
 ├── courses.html
-├── home.html
+├── index.html
 ├── styles.css
 ├── README.md
-├── CLIENT-UPDATES.md
 ├── img/
 │   ├── cpr-plus-logo3.svg
 │   ├── class_setup.png
